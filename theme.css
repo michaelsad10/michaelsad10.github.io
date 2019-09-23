@@ -1,0 +1,59 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 4fr); 
+    height: 100%; 
+    grid-row-gap: 20px;  
+    grid-column-gap: 20px; 
+}
+
+.search {
+    grid-row: 1; 
+    grid-column: 2; 
+}
+
+.searchInput {
+    width: 250px; 
+}
+
+.nav-container {
+    display: grid; 
+    grid-template: 2fr 4fr; 
+    width: 100%; 
+}
+
+.mid {
+    text-align: center;
+    border-style: solid; 
+}
+
+.side-bar {
+    grid-column: 1; 
+    grid-row: 1 / 5; 
+    border-style: solid;
+    list-style: none; 
+    /* border-block-color: black;  */
+}
+
+.weather {
+    grid-column: 3; 
+    grid-row: 1;
+    border-style: solid; 
+    /* border-block-color: black;  */
+}
+
+.pic {
+    float: right; 
+}
+
+.misc {
+    grid-column: 3; 
+    grid-row: 2 / 4; 
+    border-style: solid; 
+    text-align: center; 
+    list-style: none; 
+}
+
+.stories {
+    list-style: none; 
+}
