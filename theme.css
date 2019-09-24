@@ -5,6 +5,7 @@
     height: 100%; 
     grid-row-gap: 20px;  
     grid-column-gap: 20px; 
+    font-family: sans-serif; 
 }
 
 .search {
@@ -30,16 +31,21 @@
 .side-bar {
     grid-column: 1; 
     grid-row: 1 / 5; 
-    border-style: solid;
+    border-style: solid; 
     list-style: none; 
-    /* border-block-color: black;  */
+    padding: 5px; 
+}
+.side-bar ul {
+    color: rgb(26, 115, 232); 
+    font-size: 22px; 
+    font-weight: 500px;
+    font-family: sans-serif;
 }
 
 .weather {
     grid-column: 3; 
     grid-row: 1;
     border-style: solid; 
-    /* border-block-color: black;  */
 }
 
 .pic {
@@ -52,8 +58,39 @@
     border-style: solid; 
     text-align: center; 
     list-style: none; 
+    text-align: left; 
+}
+.misc p {
+    font-size: 24px; 
+    padding: 10px; 
+    text-align: left; 
 }
 
-.stories {
+.misc h2 {
+    font-size: 32px;
+}
+.misc h3 {
+    font-size: 28px; 
+}
+
+
+ul {
     list-style: none; 
+}
+
+ul li::before {
+    content: "•";
+    color: blue; 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 1em; 
+    margin-left: -1em; 
+}
+
+.stories {  
+    text-align: left; 
+    font-size: 22px;
+}
+.stories li {
+    padding: 10px; 
 }
