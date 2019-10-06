@@ -1,0 +1,18 @@
+#container {
+    margin-right: auto; 
+    margin-left: auto; 
+    width: 50%; 
+}
+
+form {
+    border-style: solid; 
+    padding: 10px; 
+}
+
+.input-container {
+    padding: 10px; 
+}
+
+#submitBtn {
+    padding: 10px; 
+}
