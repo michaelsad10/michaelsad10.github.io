@@ -26,9 +26,9 @@ function generatePassword() {
 
 function letterToNumber(word) {
     console.log(word); 
-    var res = word.replace(/e/g, 3); 
-    var res = res.replace(/i/g, 1); 
-    var res = res.replace(/o/g, 0); 
+    var res = word.replace(/e/gi, 3); 
+    var res = res.replace(/i/gi, 1); 
+    var res = res.replace(/o/gi, 0); 
     return res; 
 }
 
