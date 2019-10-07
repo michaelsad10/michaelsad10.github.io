@@ -40,10 +40,12 @@ function createPasswords(words, num_sub, min_word_length, max_word_length, max_l
     var passwords = []; 
     while(count<10) {
      var password = '';
-     for(var x=0; x<4; x++) {
-         var index = Math.floor(Math.random()*words.length); 
+     var x = 0; 
+     while(x<4) {
+        var index = Math.floor(Math.random()*words.length); 
          if(words[index].length >= min_word_length && words[index].length <= max_word_length) {
              password += words[index]; 
+             x++; 
          }
      }
      if(password.length <= max_length) {
@@ -62,12 +64,14 @@ function createDiversePassword(verbs, adj, num_sub, min_word_length, max_word_le
     var passwords = []; 
     while(count<10) {
         var password = ''; 
-        for(var x=0; x<2; x++) {
+        var x = 0; 
+        while(x<2) {
             var verbIndex = Math.floor(Math.random()*verbs.length); 
             var adjIndex = Math.floor(Math.random()*adj.length); 
             if(verbs[verbIndex].length >= min_word_length && verbs[verbIndex].length <= max_word_length && adj[adjIndex].length >= min_word_length && adj[adjIndex].length <= max_word_length) {
                 password += verbs[verbIndex]; 
                 password += adj[adjIndex]; 
+                x++; 
             }
         }
         if(password.length == max_length) {
