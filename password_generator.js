@@ -16,10 +16,13 @@ function generatePassword() {
    }
    var title = document.createElement("h1");
    title.innerHTML = "Passwords"; 
+   title.setAttribute("class", "passwordTitle"); 
    document.body.appendChild(title);
    for(var y=0; y<passwords.length; y++) {
        var answer = document.createElement("div");
-       answer.innerHTML = passwords[y]; 
+       answer.setAttribute("class", "passwords"); 
+       var length = passwords[y].length; 
+       answer.innerHTML = passwords[y] + " " + length; 
        document.body.appendChild(answer); 
    } 
 }
@@ -43,7 +46,7 @@ function createPasswords(words, num_sub, min_word_length, max_word_length, max_l
              password += words[index]; 
          }
      }
-     if(password.length == max_length) {
+     if(password.length <= max_length) {
          if(num_sub == true) {
              password = letterToNumber(password); 
          }
